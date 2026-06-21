@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 1: Cuestionario Estilos de Comunicación</title>
+    <title>¿Cómo me comunico con los demás?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -35,10 +35,10 @@
             <!-- PANTALLA DE INICIO -->
             <div id="pantalla-registro">
                 <h1 style="font-size: 34px; line-height: 1.15; color: #e49a00; margin: 0 0 30px 0; font-weight: bold;">
-                    Actividad 1: ¿Cómo me comunico con los demás?
+                    ¿Cómo me comunico con los demás?
                 </h1>
                 
-                <div style="background: rgba(255,255,255,0.65); border-radius: 18px; padding: 25px; margin-bottom: 28px;">
+                <div style="background: rgba(255,255,255,0.65); border-radius: 18px; padding: 25px; margin-bottom: 24px;">
                     <p style="margin: 0; line-height: 1.8; font-size: 18px;">
                         La comunicación es el puente clave para interactuar con el mundo, expresar nuestras ideas y construir nuestro futuro personal y profesional. Cada persona tiene una forma particular de conversar, escuchar e intercambiar mensajes.
                     </p>
@@ -46,6 +46,11 @@
                         Este cuestionario consta de <strong>68 afirmaciones</strong> diseñadas para identificar tus preferencias al comunicarte, clasificándolas en cuatro perfiles principales: <strong>Funcional, Normativo, Analítico e Intuitivo</strong>. No hay respuestas correctas ni incorrectas, responde de la forma más honesta posible según tu comportamiento habitual.
                     </p>
                 </div>
+
+                <!-- Texto MOOC Orientación Vocacional solicitado -->
+                <p style="font-size: 14px; color: #7a7a7a; font-weight: 600; line-height: 1.5; margin-bottom: 28px; padding-left: 5px;">
+                    Sitio creado con fines educativos para el MOOC "Orientación vocacional" del Programa Descubrí UNCUYO, de la Universidad Nacional de Cuyo.
+                </p>
 
                 <div style="background: rgba(255,255,255,0.60); border-left: 8px solid #F7C40D; border-radius: 12px; padding: 20px; margin-bottom: 32px;">
                     <h3 style="margin: 0 0 12px 0; color: #e49a00; font-size: 19px; font-weight: bold;">Escala de Frecuencia</h3>
@@ -70,7 +75,7 @@
             <div id="pantalla-test" class="hidden">
                 <div class="mb-6">
                     <div class="flex justify-between font-bold text-gray-600 mb-2 text-sm">
-                        <span id="txt-progreso-contador">Pregunta 1 de 68</span>
+                        <span id="txt-progreso-contador">Pregunta 0 de 68</span>
                         <span id="txt-progreso-porcentaje">0% Completado</span>
                     </div>
                     <div class="w-full bg-amber-200/50 rounded-full h-3 overflow-hidden">
@@ -116,7 +121,7 @@
                     </div>
                 </div>
 
-                <!-- Sección de Devoluciones Institucionales -->
+                <!-- Devoluciones Institucionales Oficiales -->
                 <div class="bg-white/90 p-6 rounded-xl space-y-6 border border-amber-200">
                     <h3 style="color: #e49a00; font-size: 22px; font-weight: bold; border-bottom: 2px solid #FFD84A; padding-bottom: 5px; margin-bottom: 15px;">
                         ¿Qué significan tus resultados?
@@ -210,7 +215,7 @@
                                 <ul class="list-disc pl-4 mt-1 space-y-0.5">
                                     <li>Son innovadores.</li>
                                     <li>Se entusiasman con ideas nuevas.</li>
-                                    <li>Piensan fuera de lo convencional.</li>
+                                    <li>Piensan fuera de lo unconventional.</li>
                                     <li>Confían en su intuición.</li>
                                 </ul>
                             </div>
@@ -247,6 +252,7 @@
     </div>
 
     <script>
+        // Banco completo de 68 afirmaciones verificadas
         const preguntas = [
             { id: 1, texto: "Estoy pendiente del qué dirán al opinar o actuar", estilo: "funcional" },
             { id: 2, texto: "Procuro convencer a otros de que tengo razón ", estilo: "normativo" },
@@ -286,6 +292,10 @@
             { id: 36, texto: "Soy seductor para lograr lo que quiero", estilo: "intuitivo" },
             { id: 37, texto: "Elogio a las personas que se lo merecen", estilo: "funcional" },
             { id: 38, texto: "Confronto las inconsistencias o incongruencias de los demás", estilo: "normativo" },
+            { id: 39, texto: "Uso la lógica en mi razonamiento", estilo: "analitico" },
+            { id: 40, texto: "Soy sencillo en mi manera de hablar", estilo: "intuitivo" },
+            { id: 41, texto: "Tiendo a decir “sí” aun cuando quisiera decir “no”", estilo: "funcional" },
+            { id: 42, texto: "Tengo posturas legalistas o moralistas ante situaciones que pueden presentarse", estilo: "normativo" },
             { id: 43, texto: "Me fijo en detalles, aunque sean superfluos o sin importancia", estilo: "analitico" },
             { id: 44, texto: "Cambio rápidamente de estado de ánimo o humor ", estilo: "intuitivo" },
             { id: 45, texto: "Acepto la ambigüedad o ambivalencia de otros ", estilo: "funcional" },
@@ -342,7 +352,6 @@
                 }
             });
 
-            // Actualizar la barra de progreso pregunta a pregunta inmediatamente cuando cambia el estado
             actualizarProgresoContinuo();
         }
 
